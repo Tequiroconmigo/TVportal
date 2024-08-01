@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let channelCategories = {};
 
 // URL del archivo M3U en GitHub
-const githubUrl = 'https://raw.githubusercontent.com/moisesvalere/portales/main/portales';
+const githubUrl = 'https://raw.githubusercontent.com/Tequiroconmigo/portal/main/deporte.m3u';
 
 // Función para obtener y actualizar las categorías de canales
 function fetchAndUpdateChannels() {
