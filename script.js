@@ -447,7 +447,33 @@ function displayChannelMenu() {
         });
     });
 }
+// Función para desabilitar click derecho y control u control shif u
+function redirigir() {
+    window.location.href = 'https://www.facebook.com'; // Reemplaza con la URL a la que quieres redirigir
+}
 
+// Detectar teclas
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+        redirigir();
+    }
+});
+
+// Detectar clic derecho
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert('El click derecho no se puede usar aquí');
+});
+
+// Detectar el uso del debugger
+(function() {
+    var before = new Date().getTime();
+    debugger;
+    var after = new Date().getTime();
+    if (after - before > 50) {
+        redirigir();
+    }
+})();
 
 
 
