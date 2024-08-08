@@ -447,15 +447,16 @@ function displayChannelMenu() {
         });
     });
 }
-// Función para desabilitar click derecho y control u control shif u
-function redirigir() {
-    window.location.href = 'https://t.me/m3u8listas'; // Reemplaza con la URL a la que quieres redirigir
+// Función para mostrar una alerta cuando se intente usar una función deshabilitada
+function mostrarAlerta() {
+    alert('Esta función está deshabilitada');
 }
 
 // Detectar teclas
 document.addEventListener('keydown', function(event) {
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
-        redirigir();
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'U'))) {
+        event.preventDefault(); // Evita que la acción por defecto ocurra
+        mostrarAlerta();
     }
 });
 
@@ -471,7 +472,7 @@ document.addEventListener('contextmenu', function(event) {
     debugger;
     var after = new Date().getTime();
     if (after - before > 50) {
-        redirigir();
+        mostrarAlerta();
     }
 })();
 
