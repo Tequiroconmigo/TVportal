@@ -449,7 +449,7 @@ function displayChannelMenu() {
 }
 // Función para desabilitar click derecho y control u control shif u
 function redirigir() {
-    window.location.href = 'https://www.facebook.com'; // Reemplaza con la URL a la que quieres redirigir
+    window.location.href = 'https://t.me/m3u8listas'; // Reemplaza con la URL a la que quieres redirigir
 }
 
 // Detectar teclas
